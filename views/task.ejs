@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/style.css">
+  <title>To do list</title>
+</head>
+
+<body>
+  <h1>LIST OF MY TASK</h1>
+  <h2><%=myDay%></h2>
+  <form action="" method="post">
+    <input type="text" name="addItem" class="addItem" placeholder="Add task here">
+    <button type="submit" name="button">Add Item</button>
+  </form>
+  <h2>Task:</h2>
+  <div class="task">
+    <% for (let i=0; i<addedItem.length; i++) { %>
+      <div class="task-item">
+        <input type="checkbox" class="task-checkbox">
+        <span><%= addedItem [i] %></span>
+      </div>
+      <% } %>
+  </div>
+</body>
+
+</html>
